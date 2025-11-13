@@ -328,7 +328,6 @@ main {
     padding: 40px 0;
 }
 
-/* === AJUSTE LAYOUT BLOG + ASIDE === */
 .blog-layout {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -350,7 +349,6 @@ main {
     align-self: start;
 }
 
-/* Alineación superior del aside con la imagen */
 .blog-sidebar {
     margin-top: 58px;
 }
@@ -391,7 +389,7 @@ main {
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    margin-top: 100px; /* bajado para que quede alineado con el inicio de la imagen */
+    margin-top: 100px;
 }
 
 
@@ -438,7 +436,93 @@ main {
     font-size: 15px;
 }
 
-/* FOOTER */
+
+/* OTROS BLOGS SCROLL HORIZONTAL*/
+.scroll-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin: 40px auto;
+    max-width: 1100px;
+    padding-bottom: 25px;
+}
+
+.otrosPosts-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 20px 10px;
+    border-bottom: 4px solid #ddd; 
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.otrosPosts-scroll::-webkit-scrollbar {
+    height: 13px;
+}
+
+.otrosPosts-scroll::-webkit-scrollbar-track {
+    background: #e6e6e6; 
+    border-radius: 10px;
+}
+
+.otrosPosts-scroll::-webkit-scrollbar-thumb {
+    background: rgb(187,90,58); 
+    border-radius: 10px;
+}
+
+.otrosPosts-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgb(160,70,45);
+}
+
+.otrosPost-container {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    scroll-snap-align: start;
+    height: 460px;
+}
+
+.otrosPost-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.otrosPost-container img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.otrosPost-container p:first-of-type {
+    font-weight: bold;
+    font-size: 18px;
+    color: #222;
+    margin: 15px 20px 5px;
+}
+
+.otrosPost-container p:last-of-type {
+    color: #666;
+    font-size: 15px;
+    margin: 0 20px 15px;
+    flex-grow: 1;
+}
+
+.otrosPost-container .blogs-button {
+    margin: 0 20px 20px;
+    align-self: center;
+    width: 80%;
+}
+
+
+/* FOOTER ESTILOS */
 footer {
     background-color: rgb(187,90,58);
     color: white;
